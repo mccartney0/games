@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcadia Retro - Jogos Clássicos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Arcadia Retro</h1>
+      <p>Reviva a nostalgia dos jogos que marcaram gerações.</p>
+      <a class="hero__cta" href="#library">Explorar coleção</a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#library">Biblioteca</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="library" class="section section--dark">
+      <div class="section__header">
+        <h2>Biblioteca de clássicos</h2>
+        <p>Uma curadoria de títulos que definiram o mundo dos videogames.</p>
+      </div>
+
+      <div class="game-grid">
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Arcade Galaga" loading="lazy" />
+          <div class="game-card__body">
+            <h3>Star Defender</h3>
+            <p>Defenda a galáxia em batalhas espaciais frenéticas e desafiadoras.</p>
+            <span class="tag">Arcade</span>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Corrida retrô" loading="lazy" />
+          <div class="game-card__body">
+            <h3>Neon Riders</h3>
+            <p>Corra nas ruas neon de uma metrópole futurista em 16 bits.</p>
+            <span class="tag">Corrida</span>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?auto=format&fit=crop&w=600&q=80" alt="Mundo de aventura" loading="lazy" />
+          <div class="game-card__body">
+            <h3>Mystic Quest</h3>
+            <p>Explore templos esquecidos e descubra segredos ancestrais.</p>
+            <span class="tag">Aventura</span>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Luta 2D" loading="lazy" />
+          <div class="game-card__body">
+            <h3>Pixel Fighters</h3>
+            <p>Lute contra adversários lendários em arenas vibrantes.</p>
+            <span class="tag">Luta</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="section__header">
+        <h2>Sobre o projeto</h2>
+        <p>Arcadia Retro é uma experiência digital dedicada à preservação e celebração dos jogos clássicos.</p>
+      </div>
+
+      <div class="about">
+        <div>
+          <h3>Curadoria especializada</h3>
+          <p>Nossa equipe seleciona jogos que marcaram época, contextualizando sua importância histórica e cultural.</p>
+        </div>
+        <div>
+          <h3>Experiência autêntica</h3>
+          <p>Interfaces inspiradas em fliperamas e consoles dos anos 80 e 90 transportam você direto para a era de ouro.</p>
+        </div>
+        <div>
+          <h3>Comunidade vibrante</h3>
+          <p>Compartilhe lembranças, dicas e descubra novos desafios com fãs de todas as idades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section section--accent">
+      <div class="section__header">
+        <h2>Junte-se à Arcadia</h2>
+        <p>Receba notícias sobre eventos, novos lançamentos e histórias exclusivas.</p>
+      </div>
+
+      <form class="signup-form">
+        <label for="email">Cadastre seu e-mail</label>
+        <div class="signup-form__controls">
+          <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required />
+          <button type="submit">Inscrever</button>
+        </div>
+        <small>Prometemos enviar apenas conteúdo épico.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Arcadia Retro. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Discord</a></li>
+    </ul>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
