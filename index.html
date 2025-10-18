@@ -22,6 +22,7 @@
   <nav class="top-nav">
     <ul>
       <li><a href="#simcity">SimCity</a></li>
+      <li><a href="#pacman">Pac-Man</a></li>
       <li><a href="#library">Biblioteca</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -94,6 +95,41 @@
       </div>
     </section>
 
+    <section id="pacman" class="section section--neon">
+      <div class="section__header">
+        <h2>Pac-Man Dimension</h2>
+        <p>Explore os corredores luminosos da Arcadia, desvie dos espectros e devore todos os pac-dots antes que o relógio do arcade expire.</p>
+      </div>
+
+      <div class="pacman-arena">
+        <div class="pacman-dashboard" aria-live="polite">
+          <div class="pacman-scoreboard">
+            <p><span>Pontuação</span><strong data-pacman-score>0000</strong></p>
+            <p><span>Vidas</span><strong data-pacman-lives>3</strong></p>
+          </div>
+
+          <div class="pacman-status">
+            <p data-pacman-status>Pressione Iniciar para começar a perseguição.</p>
+          </div>
+
+          <div class="pacman-controls">
+            <h3>Comandos</h3>
+            <ul>
+              <li>Use as setas do teclado para guiar o Pac-Man.</li>
+              <li>Coma todos os pontos para avançar de fase.</li>
+              <li>Pastilhas energéticas deixam os fantasmas vulneráveis por alguns segundos.</li>
+            </ul>
+          </div>
+
+          <button type="button" class="pacman-start" data-pacman-start>Iniciar rodada</button>
+        </div>
+
+        <div class="pacman-stage" role="region" aria-label="Labirinto de Pac-Man">
+          <canvas id="pacman-canvas" width="456" height="456"></canvas>
+        </div>
+      </div>
+    </section>
+
     <section id="library" class="section section--dark">
       <div class="section__header">
         <h2>Biblioteca de clássicos</h2>
@@ -143,6 +179,15 @@
             <h3>Pixel Fighters</h3>
             <p>Lute contra adversários lendários em arenas vibrantes.</p>
             <span class="tag">Luta</span>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=600&q=80" alt="Labirinto neon inspirado em Pac-Man" loading="lazy" />
+          <div class="game-card__body">
+            <h3>Pac-Man Dimension</h3>
+            <p>Enfrente fantasmas brilhantes em um labirinto de luzes pulsantes e conquiste combos energéticos.</p>
+            <span class="tag">Arcade</span>
           </div>
         </article>
       </div>

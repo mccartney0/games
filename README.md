@@ -10,6 +10,7 @@ Arcadia Retro é uma vitrine digital para celebrar a estética e a jogabilidade 
 - **Formulário de inscrição** com feedback visual de confirmação.
 - **Layout responsivo** com tipografia inspirada em fliperamas.
 - **SimCity Classic jogável** com ferramentas de construção, painel econômico e simulação de energia.
+- **Pac-Man Dimension** com labirinto neon, fantasmas inteligentes e modo energético temporário.
 
 ## SimCity Classic interativo
 
@@ -29,6 +30,16 @@ A seção dedicada ao SimCity Classic apresenta um tabuleiro 20x20 inspirado na 
 2. Alterne entre zonas residenciais, comerciais e industriais para equilibrar população e empregos.
 3. Observe o painel do prefeito: impostos e manutenção são calculados a cada ciclo de tempo.
 4. Use parques para recuperar o humor cívico quando o caixa estiver pressionado.
+
+## Pac-Man Dimension
+
+Pac-Man Dimension traz uma releitura neon do clássico arcade, combinando labirintos compactos com fantasmas que perseguem o jogador dinamicamente. A cada partida é possível acumular pontos, acionar o modo energético e disputar combos ao devorar fantasmas vulneráveis.
+
+### Como jogar
+
+1. Clique em **Iniciar rodada** para resetar o labirinto e começar uma nova partida.
+2. Utilize as setas do teclado para direcionar o Pac-Man pelas rotas disponíveis.
+3. Coma todas as pastilhas para vencer. As pastilhas energéticas permitem capturar fantasmas por alguns segundos e rendem pontos extras.
 
 ## Estrutura do projeto
 
