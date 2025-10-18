@@ -22,6 +22,7 @@
   <nav class="top-nav">
     <ul>
       <li><a href="#library">Biblioteca</a></li>
+      <li><a href="#pacman">PAC-MAN</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
@@ -35,6 +36,16 @@
       </div>
 
       <div class="game-grid">
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?auto=format&fit=crop&w=600&q=80" alt="Labirinto iluminado evocando PAC-MAN" loading="lazy" />
+          <div class="game-card__body">
+            <h3>PAC-MAN Revival</h3>
+            <p>Guie o herói esférico pelos corredores neon, driblando fantasmas e devorando todas as pílulas energéticas da fase.</p>
+            <span class="tag">Arcade</span>
+            <a class="game-card__action" href="#pacman">Jogar agora</a>
+          </div>
+        </article>
+
         <article class="game-card">
           <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&q=80" alt="SimCity Classic vista aérea" loading="lazy" />
           <div class="game-card__body">
@@ -79,6 +90,34 @@
             <span class="tag">Luta</span>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="pacman" class="section section--game">
+      <div class="section__header">
+        <h2>PAC-MAN Revival</h2>
+        <p>Experimente uma releitura fiel em pixel art do clássico absoluto dos fliperamas, com labirintos vibrantes, fantasmas determinados e muita pontuação a conquistar.</p>
+      </div>
+
+      <div class="pacman-layout">
+        <aside class="pacman-hud" aria-live="polite">
+          <div class="pacman-hud__metric">Pontuação: <span id="pacman-score">0</span></div>
+          <div class="pacman-hud__metric">Vidas: <span id="pacman-lives">3</span></div>
+          <p id="pacman-status" class="pacman-hud__status">Pressione espaço para iniciar.</p>
+          <button type="button" id="pacman-reset" class="pacman-hud__button">Reiniciar rodada</button>
+        </aside>
+
+        <canvas id="pacman-canvas" width="448" height="480" role="img" aria-label="Labirinto do jogo PAC-MAN"></canvas>
+
+        <aside class="pacman-instructions">
+          <h3>Como jogar</h3>
+          <ul>
+            <li>Use as setas do teclado ou WASD para mover o PAC-MAN.</li>
+            <li>Coma todas as pílulas para avançar e acumular pontos.</li>
+            <li>As pílulas energéticas deixam os fantasmas vulneráveis por alguns segundos.</li>
+            <li>A barra de espaço alterna entre pausa e continuação da partida.</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
