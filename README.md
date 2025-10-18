@@ -1,6 +1,6 @@
 # Arcadia Retro
 
-Arcadia Retro é uma vitrine digital para celebrar a estética e a jogabilidade dos clássicos dos videogames. O projeto apresenta uma landing page estática que reúne destaques de jogos, contexto histórico e um formulário de inscrição para receber novidades.
+Arcadia Retro é uma vitrine digital para celebrar a estética e a jogabilidade dos clássicos dos videogames. O projeto apresenta uma landing page estática que reúne destaques de jogos, contexto histórico, um formulário de inscrição para receber novidades e uma releitura interativa de SimCity.
 
 ## Funcionalidades
 
@@ -9,6 +9,26 @@ Arcadia Retro é uma vitrine digital para celebrar a estética e a jogabilidade 
 - **Apresentação do projeto** destacando curadoria, experiência e comunidade.
 - **Formulário de inscrição** com feedback visual de confirmação.
 - **Layout responsivo** com tipografia inspirada em fliperamas.
+- **SimCity Classic jogável** com ferramentas de construção, painel econômico e simulação de energia.
+
+## SimCity Classic interativo
+
+A seção dedicada ao SimCity Classic apresenta um tabuleiro 20x20 inspirado na estética retrô futurista do projeto. O objetivo é equilibrar orçamento, energia e humor cívico para expandir a cidade.
+
+### Ferramentas disponíveis
+
+- **Estrada**: conecta zonas e permite que recebam moradores ou empregos.
+- **Residencial, Comercial e Industrial**: zonas que geram população, impostos e empregos quando ligadas à rede.
+- **Usina**: aumenta a capacidade energética. Sem energia suficiente, as zonas funcionam com capacidade reduzida.
+- **Parque**: melhora o humor da população e suaviza momentos de crise.
+- **Remover**: libera terrenos, devolvendo parte do investimento.
+
+### Dicas de progresso
+
+1. Trace estradas e instale a primeira usina para garantir energia inicial.
+2. Alterne entre zonas residenciais, comerciais e industriais para equilibrar população e empregos.
+3. Observe o painel do prefeito: impostos e manutenção são calculados a cada ciclo de tempo.
+4. Use parques para recuperar o humor cívico quando o caixa estiver pressionado.
 
 ## Estrutura do projeto
 

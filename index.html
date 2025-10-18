@@ -21,6 +21,7 @@
 
   <nav class="top-nav">
     <ul>
+      <li><a href="#simcity">SimCity</a></li>
       <li><a href="#library">Biblioteca</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -28,6 +29,71 @@
   </nav>
 
   <main>
+    <section id="simcity" class="section section--accent">
+      <div class="section__header">
+        <h2>SimCity Classic</h2>
+        <p>Transforme um terreno vazio em uma metrópole vibrante equilibrando orçamento, infraestrutura e satisfação da população.</p>
+      </div>
+
+      <div class="simcity">
+        <aside class="simcity__panel">
+          <h3>Painel do prefeito</h3>
+          <dl class="simcity__stats">
+            <div>
+              <dt>Caixa da cidade</dt>
+              <dd id="simcity-funds">R$ 0,00</dd>
+            </div>
+            <div>
+              <dt>População estimada</dt>
+              <dd id="simcity-population">0 habitantes</dd>
+            </div>
+            <div>
+              <dt>Empregos ativos</dt>
+              <dd id="simcity-jobs">0 vagas</dd>
+            </div>
+          </dl>
+
+          <div class="simcity__toolbar" role="group" aria-label="Ferramentas de construção">
+            <button type="button" data-tool="road" class="is-active">Estrada</button>
+            <button type="button" data-tool="residential">Residencial</button>
+            <button type="button" data-tool="commercial">Comercial</button>
+            <button type="button" data-tool="industrial">Industrial</button>
+            <button type="button" data-tool="power">Usina</button>
+            <button type="button" data-tool="park">Parque</button>
+            <button type="button" data-tool="bulldoze" class="simcity__toolbar--danger">Remover</button>
+          </div>
+
+          <div class="simcity__indicators">
+            <p><span>Humor cívico</span><strong id="simcity-mood">Esperançoso</strong></p>
+            <p><span>Energia</span><strong id="simcity-power">Estável</strong></p>
+          </div>
+
+          <div class="simcity__log" id="simcity-log" aria-live="polite">
+            <p>Bem-vindo a Arcadia! Construa estradas para iniciar sua cidade.</p>
+          </div>
+
+          <ul class="simcity__tips">
+            <li>Construa estradas para conectar zonas residenciais, comerciais e industriais.</li>
+            <li>Usinas fornecem energia para toda a rede, mas exigem manutenção constante.</li>
+            <li>Parques aumentam o humor da população, reduzindo o desgaste da cidade.</li>
+          </ul>
+        </aside>
+
+        <div class="simcity__playfield">
+          <canvas id="simcity-canvas" width="640" height="640" aria-label="Mapa da cidade"></canvas>
+          <div class="simcity__legend">
+            <span><i class="tile tile--road"></i> Estrada</span>
+            <span><i class="tile tile--residential"></i> Residencial</span>
+            <span><i class="tile tile--commercial"></i> Comercial</span>
+            <span><i class="tile tile--industrial"></i> Industrial</span>
+            <span><i class="tile tile--power"></i> Usina</span>
+            <span><i class="tile tile--park"></i> Parque</span>
+          </div>
+          <p class="simcity__helper">Clique no mapa para posicionar zonas. Planeje energia e estradas para manter a cidade funcionando.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="library" class="section section--dark">
       <div class="section__header">
         <h2>Biblioteca de clássicos</h2>
