@@ -1,0 +1,237 @@
+.hero--home {
+  background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+}
+
+.section__header {
+  text-align: center;
+}
+
+.section__header h2 {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+}
+
+.section__header p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.feature-card {
+  background: var(--color-card);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+.feature-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.game-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.game-card {
+  background: var(--color-card);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.game-card__body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.game-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.game-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.game-card__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.game-card__actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 14px;
+  background: rgba(255, 46, 99, 0.15);
+  border: 1px solid rgba(255, 46, 99, 0.3);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.game-card__actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 46, 99, 0.25);
+}
+
+.about {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.about h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.about p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.signup-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.signup-form label {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.signup-form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.signup-form input {
+  flex: 1 1 220px;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(8, 8, 22, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(255, 46, 99, 0.25);
+}
+
+.signup-form button {
+  padding: 0.9rem 1.8rem;
+  border-radius: 14px;
+  border: none;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.signup-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 25px rgba(255, 46, 99, 0.35);
+}
+
+.signup-form small {
+  color: var(--color-text-muted);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2.5rem;
+  transform: translate(-50%, 120%);
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(6, 6, 18, 0.9);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: transform 260ms ease, opacity 260ms ease;
+  z-index: 50;
+}
+
+.toast.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+@media (max-width: 720px) {
+  .feature-grid {
+    gap: 1.5rem;
+  }
+
+  .game-card__actions {
+    flex-direction: column;
+  }
+
+  .signup-form__controls {
+    flex-direction: column;
+  }
+}

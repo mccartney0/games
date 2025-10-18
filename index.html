@@ -3,191 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arcadia Retro - Jogos Clássicos</title>
+  <title>Arcadia Retro - Coleção de jogos clássicos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="hero hero--home">
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <h1>Arcadia Retro</h1>
-      <p>Reviva a nostalgia dos jogos que marcaram gerações.</p>
-      <a class="hero__cta" href="#library">Explorar coleção</a>
+      <p>Um portal para reviver clássicos inesquecíveis com estética retrô futurista e experiências interativas.</p>
+      <a class="hero__cta" href="#destaques">Explorar destaques</a>
     </div>
   </header>
 
   <nav class="top-nav">
     <ul>
-      <li><a href="#simcity">SimCity</a></li>
-      <li><a href="#pacman">Pac-Man</a></li>
-      <li><a href="#library">Biblioteca</a></li>
+      <li><a href="#destaques">Destaques</a></li>
+      <li><a href="#biblioteca">Biblioteca</a></li>
+      <li><a href="pages/simcity/index.html">SimCity Classic</a></li>
+      <li><a href="pages/pacman/index.html">Pac-Man Dimension</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="simcity" class="section section--accent">
+    <section id="destaques" class="section section--accent">
       <div class="section__header">
-        <h2>SimCity Classic</h2>
-        <p>Transforme um terreno vazio em uma metrópole vibrante equilibrando orçamento, infraestrutura e satisfação da população.</p>
+        <h2>Experiências imersivas</h2>
+        <p>Conheça os jogos desenvolvidos especialmente para este acervo. Cada título possui página própria, com códigos HTML, CSS e JavaScript dedicados.</p>
       </div>
 
-      <div class="simcity">
-        <aside class="simcity__panel">
-          <h3>Painel do prefeito</h3>
-          <dl class="simcity__stats">
-            <div>
-              <dt>Caixa da cidade</dt>
-              <dd id="simcity-funds">R$ 0,00</dd>
-            </div>
-            <div>
-              <dt>População estimada</dt>
-              <dd id="simcity-population">0 habitantes</dd>
-            </div>
-            <div>
-              <dt>Empregos ativos</dt>
-              <dd id="simcity-jobs">0 vagas</dd>
-            </div>
-          </dl>
-
-          <div class="simcity__toolbar" role="group" aria-label="Ferramentas de construção">
-            <button type="button" data-tool="road" class="is-active">Estrada</button>
-            <button type="button" data-tool="residential">Residencial</button>
-            <button type="button" data-tool="commercial">Comercial</button>
-            <button type="button" data-tool="industrial">Industrial</button>
-            <button type="button" data-tool="power">Usina</button>
-            <button type="button" data-tool="park">Parque</button>
-            <button type="button" data-tool="bulldoze" class="simcity__toolbar--danger">Remover</button>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>SimCity Classic</h3>
+          <p>Gerencie uma metrópole em expansão, equilibre impostos, energia e humor cívico em um tabuleiro isométrico cheio de personalidade.</p>
+          <div class="game-card__actions">
+            <a href="pages/simcity/index.html">Acessar o jogo</a>
           </div>
+        </article>
 
-          <div class="simcity__indicators">
-            <p><span>Humor cívico</span><strong id="simcity-mood">Esperançoso</strong></p>
-            <p><span>Energia</span><strong id="simcity-power">Estável</strong></p>
+        <article class="feature-card">
+          <h3>Pac-Man Dimension</h3>
+          <p>Encare fantasmas reluzentes em um labirinto neon responsivo, com física própria e modo energético temporário para reverter o jogo.</p>
+          <div class="game-card__actions">
+            <a href="pages/pacman/index.html">Entrar no labirinto</a>
           </div>
+        </article>
 
-          <div class="simcity__log" id="simcity-log" aria-live="polite">
-            <p>Bem-vindo a Arcadia! Construa estradas para iniciar sua cidade.</p>
-          </div>
-
-          <ul class="simcity__tips">
-            <li>Construa estradas para conectar zonas residenciais, comerciais e industriais.</li>
-            <li>Usinas fornecem energia para toda a rede, mas exigem manutenção constante.</li>
-            <li>Parques aumentam o humor da população, reduzindo o desgaste da cidade.</li>
-          </ul>
-        </aside>
-
-        <div class="simcity__playfield">
-          <canvas id="simcity-canvas" width="640" height="640" aria-label="Mapa da cidade"></canvas>
-          <div class="simcity__legend">
-            <span><i class="tile tile--road"></i> Estrada</span>
-            <span><i class="tile tile--residential"></i> Residencial</span>
-            <span><i class="tile tile--commercial"></i> Comercial</span>
-            <span><i class="tile tile--industrial"></i> Industrial</span>
-            <span><i class="tile tile--power"></i> Usina</span>
-            <span><i class="tile tile--park"></i> Parque</span>
-          </div>
-          <p class="simcity__helper">Clique no mapa para posicionar zonas. Planeje energia e estradas para manter a cidade funcionando.</p>
-        </div>
+        <article class="feature-card">
+          <h3>Universo em expansão</h3>
+          <p>O projeto está pronto para receber novos clássicos. Basta criar uma nova pasta com os arquivos do jogo para que ele se integre à coleção.</p>
+        </article>
       </div>
     </section>
 
-    <section id="pacman" class="section section--neon">
-      <div class="section__header">
-        <h2>Pac-Man Dimension</h2>
-        <p>Explore os corredores luminosos da Arcadia, desvie dos espectros e devore todos os pac-dots antes que o relógio do arcade expire.</p>
-      </div>
-
-      <div class="pacman-arena">
-        <div class="pacman-dashboard" aria-live="polite">
-          <div class="pacman-scoreboard">
-            <p><span>Pontuação</span><strong data-pacman-score>0000</strong></p>
-            <p><span>Vidas</span><strong data-pacman-lives>3</strong></p>
-          </div>
-
-          <div class="pacman-status">
-            <p data-pacman-status>Pressione Iniciar para começar a perseguição.</p>
-          </div>
-
-          <div class="pacman-controls">
-            <h3>Comandos</h3>
-            <ul>
-              <li>Use as setas do teclado para guiar o Pac-Man.</li>
-              <li>Coma todos os pontos para avançar de fase.</li>
-              <li>Pastilhas energéticas deixam os fantasmas vulneráveis por alguns segundos.</li>
-            </ul>
-          </div>
-
-          <button type="button" class="pacman-start" data-pacman-start>Iniciar rodada</button>
-        </div>
-
-        <div class="pacman-stage" role="region" aria-label="Labirinto de Pac-Man">
-          <canvas id="pacman-canvas" width="456" height="456"></canvas>
-        </div>
-      </div>
-    </section>
-
-    <section id="library" class="section section--dark">
+    <section id="biblioteca" class="section section--dark">
       <div class="section__header">
         <h2>Biblioteca de clássicos</h2>
-        <p>Uma curadoria de títulos que definiram o mundo dos videogames.</p>
+        <p>Uma curadoria com títulos que influenciaram gerações de jogadores e desenvolvedores.</p>
       </div>
 
       <div class="game-grid">
         <article class="game-card">
-          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&q=80" alt="SimCity Classic vista aérea" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&q=80" alt="Vista aérea de uma cidade estilo SimCity" loading="lazy" />
           <div class="game-card__body">
             <h3>SimCity Classic</h3>
-            <p>Planeje metrópoles vibrantes equilibrando construção, economia e eventos aleatórios que desafiam sua gestão.</p>
+            <p>Planeje zonas residenciais, comerciais e industriais para transformar um terreno vazio em uma metrópole vibrante.</p>
             <span class="tag">Simulação</span>
+            <div class="game-card__actions">
+              <a href="pages/simcity/index.html">Abrir página dedicada</a>
+            </div>
           </div>
         </article>
 
         <article class="game-card">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Arcade Galaga" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=600&q=80" alt="Labirinto inspirado em Pac-Man" loading="lazy" />
+          <div class="game-card__body">
+            <h3>Pac-Man Dimension</h3>
+            <p>Desvie dos espectros neon, colete pac-dots e aproveite o modo energético para somar combos em sequência.</p>
+            <span class="tag">Arcade</span>
+            <div class="game-card__actions">
+              <a href="pages/pacman/index.html">Abrir página dedicada</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Arcade espacial retrô" loading="lazy" />
           <div class="game-card__body">
             <h3>Star Defender</h3>
-            <p>Defenda a galáxia em batalhas espaciais frenéticas e desafiadoras.</p>
+            <p>Defenda a galáxia em batalhas intergalácticas aceleradas cheias de inimigos imprevisíveis.</p>
             <span class="tag">Arcade</span>
           </div>
         </article>
 
         <article class="game-card">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Corrida retrô" loading="lazy" />
-          <div class="game-card__body">
-            <h3>Neon Riders</h3>
-            <p>Corra nas ruas neon de uma metrópole futurista em 16 bits.</p>
-            <span class="tag">Corrida</span>
-          </div>
-        </article>
-
-        <article class="game-card">
-          <img src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?auto=format&fit=crop&w=600&q=80" alt="Mundo de aventura" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?auto=format&fit=crop&w=600&q=80" alt="Mundo de aventura místico" loading="lazy" />
           <div class="game-card__body">
             <h3>Mystic Quest</h3>
-            <p>Explore templos esquecidos e descubra segredos ancestrais.</p>
+            <p>Explore templos esquecidos, resolva enigmas ancestrais e desperte poderes lendários.</p>
             <span class="tag">Aventura</span>
           </div>
         </article>
 
         <article class="game-card">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Luta 2D" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Corrida noturna retrô" loading="lazy" />
           <div class="game-card__body">
-            <h3>Pixel Fighters</h3>
-            <p>Lute contra adversários lendários em arenas vibrantes.</p>
-            <span class="tag">Luta</span>
+            <h3>Neon Riders</h3>
+            <p>Corra por avenidas iluminadas, domine curvas perigosas e dispute campeonatos futuristas.</p>
+            <span class="tag">Corrida</span>
           </div>
         </article>
 
         <article class="game-card">
-          <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=600&q=80" alt="Labirinto neon inspirado em Pac-Man" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Luta 2D de estilo pixel art" loading="lazy" />
           <div class="game-card__body">
-            <h3>Pac-Man Dimension</h3>
-            <p>Enfrente fantasmas brilhantes em um labirinto de luzes pulsantes e conquiste combos energéticos.</p>
-            <span class="tag">Arcade</span>
+            <h3>Pixel Fighters</h3>
+            <p>Enfrente lutadores lendários em arenas coloridas, cada uma com golpes especiais e arenas únicas.</p>
+            <span class="tag">Luta</span>
           </div>
         </article>
       </div>
@@ -196,29 +134,29 @@
     <section id="sobre" class="section">
       <div class="section__header">
         <h2>Sobre o projeto</h2>
-        <p>Arcadia Retro é uma experiência digital dedicada à preservação e celebração dos jogos clássicos.</p>
+        <p>Arcadia Retro conecta histórias, mecânicas e memórias afetivas dos arcades e consoles que marcaram os anos 80 e 90.</p>
       </div>
 
       <div class="about">
         <div>
           <h3>Curadoria especializada</h3>
-          <p>Nossa equipe seleciona jogos que marcaram época, contextualizando sua importância histórica e cultural.</p>
+          <p>Selecionamos títulos que influenciaram gerações, contextualizando sua importância histórica e cultural.</p>
         </div>
         <div>
-          <h3>Experiência autêntica</h3>
-          <p>Interfaces inspiradas em fliperamas e consoles dos anos 80 e 90 transportam você direto para a era de ouro.</p>
+          <h3>Estética autêntica</h3>
+          <p>Interfaces e efeitos inspirados em neon transportam você diretamente para os fliperamas clássicos.</p>
         </div>
         <div>
           <h3>Comunidade vibrante</h3>
-          <p>Compartilhe lembranças, dicas e descubra novos desafios com fãs de todas as idades.</p>
+          <p>Compartilhe recordes, desafie amigos e descubra novos segredos da Arcadia Retro.</p>
         </div>
       </div>
     </section>
 
     <section id="contato" class="section section--accent">
       <div class="section__header">
-        <h2>Junte-se à Arcadia</h2>
-        <p>Receba notícias sobre eventos, novos lançamentos e histórias exclusivas.</p>
+        <h2>Receba novidades</h2>
+        <p>Cadastre-se para acompanhar lançamentos, bastidores e eventos especiais.</p>
       </div>
 
       <form class="signup-form">
@@ -241,6 +179,6 @@
     </ul>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 </html>

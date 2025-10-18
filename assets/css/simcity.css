@@ -1,0 +1,207 @@
+.hero--simcity {
+  background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+}
+
+.simcity {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.simcity__panel {
+  background: rgba(10, 10, 28, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 1.8rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.simcity__panel h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.simcity__stats {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.simcity__stats div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.simcity__stats dt {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.simcity__stats dd {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.simcity__toolbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.6rem;
+}
+
+.simcity__toolbar button {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 0.7rem 1rem;
+  background: rgba(14, 14, 32, 0.9);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.simcity__toolbar button:hover,
+.simcity__toolbar button.is-active {
+  background: rgba(255, 46, 99, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(255, 46, 99, 0.18);
+}
+
+.simcity__toolbar--danger {
+  background: rgba(255, 84, 84, 0.15);
+  border-color: rgba(255, 84, 84, 0.45);
+}
+
+.simcity__toolbar--danger:hover,
+.simcity__toolbar--danger.is-active {
+  background: rgba(255, 84, 84, 0.3);
+  box-shadow: 0 12px 28px rgba(255, 84, 84, 0.35);
+}
+
+.simcity__indicators {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(14, 14, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.simcity__indicators p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.simcity__indicators strong {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.simcity__log {
+  min-height: 110px;
+  max-height: 160px;
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  background: rgba(9, 9, 24, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  overflow-y: auto;
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.simcity__log p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.simcity__tips {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.simcity__playfield {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+}
+
+#simcity-canvas {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(12, 12, 30, 0.85);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.45);
+  cursor: crosshair;
+}
+
+.simcity__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.4rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.simcity__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.simcity__helper {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.tile {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.tile--road { background: #5c6279; }
+.tile--residential { background: #2ecc71; }
+.tile--commercial { background: #3498db; }
+.tile--industrial { background: #f1c40f; }
+.tile--power { background: #e74c3c; }
+.tile--park { background: #27ae60; }
+
+@media (max-width: 720px) {
+  .simcity {
+    grid-template-columns: 1fr;
+  }
+
+  .simcity__playfield {
+    justify-items: stretch;
+  }
+
+  #simcity-canvas {
+    width: 100%;
+    height: auto;
+  }
+}
