@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimCity Classic - Arcadia Retro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/simcity.css" />
+</head>
+<body>
+  <header class="hero hero--simcity">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>SimCity Classic</h1>
+      <p>Construa uma cidade vibrante, equilibre o orçamento municipal e mantenha a população confiante no futuro.</p>
+      <a class="hero__cta" href="#simcity">Iniciar planejamento</a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../../index.html">Início</a></li>
+      <li><a href="#simcity">Painel</a></li>
+      <li><a href="#guia">Guia rápido</a></li>
+      <li><a href="../pacman/index.html">Pac-Man Dimension</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="simcity" class="section section--accent">
+      <div class="section__header">
+        <h2>Painel do prefeito</h2>
+        <p>Acompanhe os indicadores econômicos e escolha as ferramentas ideais para expandir sua Arcadia.</p>
+      </div>
+
+      <div class="simcity">
+        <aside class="simcity__panel">
+          <h3>Indicadores da cidade</h3>
+          <dl class="simcity__stats">
+            <div>
+              <dt>Caixa da cidade</dt>
+              <dd id="simcity-funds">R$ 0,00</dd>
+            </div>
+            <div>
+              <dt>População estimada</dt>
+              <dd id="simcity-population">0 habitantes</dd>
+            </div>
+            <div>
+              <dt>Empregos ativos</dt>
+              <dd id="simcity-jobs">0 vagas</dd>
+            </div>
+          </dl>
+
+          <div class="simcity__toolbar" role="group" aria-label="Ferramentas de construção">
+            <button type="button" data-tool="road" class="is-active">Estrada</button>
+            <button type="button" data-tool="residential">Residencial</button>
+            <button type="button" data-tool="commercial">Comercial</button>
+            <button type="button" data-tool="industrial">Industrial</button>
+            <button type="button" data-tool="power">Usina</button>
+            <button type="button" data-tool="park">Parque</button>
+            <button type="button" data-tool="bulldoze" class="simcity__toolbar--danger">Remover</button>
+          </div>
+
+          <div class="simcity__indicators">
+            <p><span>Humor cívico</span><strong id="simcity-mood">Esperançoso</strong></p>
+            <p><span>Energia</span><strong id="simcity-power">Estável</strong></p>
+          </div>
+
+          <div class="simcity__log" id="simcity-log" aria-live="polite">
+            <p>Bem-vindo a Arcadia! Construa estradas para iniciar sua cidade.</p>
+          </div>
+
+          <ul class="simcity__tips">
+            <li>Construa estradas para conectar zonas residenciais, comerciais e industriais.</li>
+            <li>Usinas fornecem energia para toda a rede, mas exigem manutenção constante.</li>
+            <li>Parques aumentam o humor da população e reduzem crises.</li>
+          </ul>
+        </aside>
+
+        <div class="simcity__playfield">
+          <canvas id="simcity-canvas" width="640" height="640" aria-label="Mapa da cidade"></canvas>
+          <div class="simcity__legend">
+            <span><i class="tile tile--road"></i> Estrada</span>
+            <span><i class="tile tile--residential"></i> Residencial</span>
+            <span><i class="tile tile--commercial"></i> Comercial</span>
+            <span><i class="tile tile--industrial"></i> Industrial</span>
+            <span><i class="tile tile--power"></i> Usina</span>
+            <span><i class="tile tile--park"></i> Parque</span>
+          </div>
+          <p class="simcity__helper">Clique no mapa para posicionar zonas. Planeje energia e estradas para manter a cidade funcionando.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="guia" class="section">
+      <div class="section__header">
+        <h2>Guia rápido de desenvolvimento</h2>
+        <p>Dicas essenciais para manter Arcadia sustentável e próspera.</p>
+      </div>
+
+      <div class="about">
+        <div>
+          <h3>Equilíbrio econômico</h3>
+          <p>Intercale zonas residenciais, comerciais e industriais para gerar impostos, empregos e manter a demanda aquecida.</p>
+        </div>
+        <div>
+          <h3>Energia estratégica</h3>
+          <p>Monitore a barra de energia: usinas adicionais garantem cobertura para novas áreas em expansão.</p>
+        </div>
+        <div>
+          <h3>Qualidade de vida</h3>
+          <p>Parques e boa infraestrutura viária melhoram o humor cívico, atraindo novos moradores para sua cidade.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Arcadia Retro. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="../../index.html#contato">Inscreva-se</a></li>
+      <li><a href="../../index.html#biblioteca">Ver biblioteca</a></li>
+      <li><a href="../pacman/index.html">Explorar Pac-Man</a></li>
+    </ul>
+  </footer>
+
+  <script src="../../assets/js/simcity.js"></script>
+</body>
+</html>

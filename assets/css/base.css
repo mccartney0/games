@@ -1,0 +1,220 @@
+:root {
+  --color-background: #0b0b17;
+  --color-surface: rgba(16, 16, 32, 0.85);
+  --color-accent: #ff2e63;
+  --color-accent-soft: rgba(255, 46, 99, 0.15);
+  --color-text: #f2f2f7;
+  --color-text-muted: #c9c9d6;
+  --color-card: rgba(24, 24, 48, 0.9);
+  --font-display: "Press Start 2P", system-ui;
+  --font-body: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --transition: 180ms ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: radial-gradient(circle at top, #12122b, #05050f 70%);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  color: #fff;
+}
+
+button {
+  font-family: inherit;
+}
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 11, 23, 0.9), rgba(19, 16, 48, 0.6));
+}
+
+.hero__content {
+  position: relative;
+  padding: 4rem 1.5rem;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  letter-spacing: 4px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 10px 25px rgba(255, 46, 99, 0.3);
+}
+
+.hero__cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(255, 46, 99, 0.4);
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(7, 7, 18, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color var(--transition);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(12, 12, 28, 0.85);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px rgba(5, 5, 15, 0.45);
+}
+
+.section--accent {
+  background: linear-gradient(145deg, rgba(255, 46, 99, 0.1), rgba(12, 12, 28, 0.92));
+  border-color: rgba(255, 46, 99, 0.2);
+}
+
+.section--neon {
+  background: linear-gradient(150deg, rgba(71, 57, 255, 0.18), rgba(15, 12, 38, 0.92));
+  border-color: rgba(71, 57, 255, 0.25);
+}
+
+.section--dark {
+  background: rgba(6, 6, 20, 0.9);
+}
+
+.section__header {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.section__header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  letter-spacing: 2px;
+}
+
+.section__header p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.footer {
+  padding: 2rem 1.5rem 3rem;
+  background: rgba(5, 5, 15, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.footer p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .top-nav ul {
+    gap: 1rem;
+  }
+
+  main {
+    padding: 3rem 1rem 5rem;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pac-Man Dimension - Arcadia Retro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/pacman.css" />
+</head>
+<body>
+  <header class="hero hero--pacman">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Pac-Man Dimension</h1>
+      <p>Explore corredores iluminados, drible espectros inteligentes e conquiste combos energéticos.</p>
+      <a class="hero__cta" href="#pacman">Entrar na arena</a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../../index.html">Início</a></li>
+      <li><a href="#pacman">Arena</a></li>
+      <li><a href="#dicas">Estratégias</a></li>
+      <li><a href="../simcity/index.html">SimCity Classic</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="pacman" class="section section--neon">
+      <div class="section__header">
+        <h2>Pronto para a perseguição?</h2>
+        <p>Gerencie o modo energético, evite emboscadas e acumule pontos para dominar o placar da Arcadia.</p>
+      </div>
+
+      <div class="pacman-arena">
+        <div class="pacman-dashboard" aria-live="polite">
+          <div class="pacman-scoreboard">
+            <p><span>Pontuação</span><strong data-pacman-score>0000</strong></p>
+            <p><span>Vidas</span><strong data-pacman-lives>3</strong></p>
+          </div>
+
+          <div class="pacman-status">
+            <p data-pacman-status>Pressione Iniciar para começar a perseguição.</p>
+          </div>
+
+          <div class="pacman-controls">
+            <h3>Comandos</h3>
+            <ul>
+              <li>Use as setas do teclado para guiar o Pac-Man.</li>
+              <li>Coma todos os pontos para avançar de fase.</li>
+              <li>Pastilhas energéticas deixam os fantasmas vulneráveis por alguns segundos.</li>
+            </ul>
+          </div>
+
+          <button type="button" class="pacman-start" data-pacman-start>Iniciar rodada</button>
+        </div>
+
+        <div class="pacman-stage" role="region" aria-label="Labirinto de Pac-Man">
+          <canvas id="pacman-canvas" width="456" height="456"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="dicas" class="section">
+      <div class="section__header">
+        <h2>Como dominar o labirinto</h2>
+        <p>Estratégias rápidas para manter a vantagem sobre os fantasmas.</p>
+      </div>
+
+      <div class="about">
+        <div>
+          <h3>Controle do mapa</h3>
+          <p>Mantenha-se próximo às pastilhas energéticas para virar o jogo quando os fantasmas se aproximarem.</p>
+        </div>
+        <div>
+          <h3>Rotas seguras</h3>
+          <p>Identifique corredores com menos interseções para fugir rapidamente durante perseguições intensas.</p>
+        </div>
+        <div>
+          <h3>Gestão de ritmo</h3>
+          <p>Use momentos de tranquilidade para limpar áreas periféricas e maximize pontuações durante o modo energético.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Arcadia Retro. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="../../index.html#contato">Cadastre-se</a></li>
+      <li><a href="../../index.html#biblioteca">Ver biblioteca</a></li>
+      <li><a href="../simcity/index.html">Planejar cidade</a></li>
+    </ul>
+  </footer>
+
+  <script src="../../assets/js/pacman.js"></script>
+</body>
+</html>

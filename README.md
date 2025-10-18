@@ -1,56 +1,37 @@
 # Arcadia Retro
 
-Arcadia Retro é uma vitrine digital para celebrar a estética e a jogabilidade dos clássicos dos videogames. O projeto apresenta uma landing page estática que reúne destaques de jogos, contexto histórico, um formulário de inscrição para receber novidades e uma releitura interativa de SimCity.
+Arcadia Retro é uma vitrine digital para celebrar a estética e a jogabilidade dos clássicos dos videogames. Agora cada jogo possui uma página própria com arquivos HTML, CSS e JavaScript dedicados, facilitando a manutenção e a expansão da coleção.
 
 ## Funcionalidades
 
-- **Seção hero** com chamada principal e convite para explorar a coleção.
-- **Biblioteca de jogos** com cards responsivos e categorias temáticas.
-- **Apresentação do projeto** destacando curadoria, experiência e comunidade.
-- **Formulário de inscrição** com feedback visual de confirmação.
-- **Layout responsivo** com tipografia inspirada em fliperamas.
-- **SimCity Classic jogável** com ferramentas de construção, painel econômico e simulação de energia.
-- **Pac-Man Dimension** com labirinto neon, fantasmas inteligentes e modo energético temporário.
-
-## SimCity Classic interativo
-
-A seção dedicada ao SimCity Classic apresenta um tabuleiro 20x20 inspirado na estética retrô futurista do projeto. O objetivo é equilibrar orçamento, energia e humor cívico para expandir a cidade.
-
-### Ferramentas disponíveis
-
-- **Estrada**: conecta zonas e permite que recebam moradores ou empregos.
-- **Residencial, Comercial e Industrial**: zonas que geram população, impostos e empregos quando ligadas à rede.
-- **Usina**: aumenta a capacidade energética. Sem energia suficiente, as zonas funcionam com capacidade reduzida.
-- **Parque**: melhora o humor da população e suaviza momentos de crise.
-- **Remover**: libera terrenos, devolvendo parte do investimento.
-
-### Dicas de progresso
-
-1. Trace estradas e instale a primeira usina para garantir energia inicial.
-2. Alterne entre zonas residenciais, comerciais e industriais para equilibrar população e empregos.
-3. Observe o painel do prefeito: impostos e manutenção são calculados a cada ciclo de tempo.
-4. Use parques para recuperar o humor cívico quando o caixa estiver pressionado.
-
-## Pac-Man Dimension
-
-Pac-Man Dimension traz uma releitura neon do clássico arcade, combinando labirintos compactos com fantasmas que perseguem o jogador dinamicamente. A cada partida é possível acumular pontos, acionar o modo energético e disputar combos ao devorar fantasmas vulneráveis.
-
-### Como jogar
-
-1. Clique em **Iniciar rodada** para resetar o labirinto e começar uma nova partida.
-2. Utilize as setas do teclado para direcionar o Pac-Man pelas rotas disponíveis.
-3. Coma todas as pastilhas para vencer. As pastilhas energéticas permitem capturar fantasmas por alguns segundos e rendem pontos extras.
+- **Landing page temática** com destaques, biblioteca de clássicos e formulário de inscrição.
+- **Página do SimCity Classic** com tabuleiro 20x20, painel econômico e ferramentas de construção independentes.
+- **Página do Pac-Man Dimension** com labirinto neon, fantasmas inteligentes e modo energético temporário.
+- **Arquitetura modular**: cada jogo tem sua pasta com ativos isolados.
+- **Estilo retrô futurista** aplicado em todas as páginas.
 
 ## Estrutura do projeto
 
 ```
 .
-├── index.html      # Página principal do site
-├── scripts.js      # Interações da landing page
-├── styles/
-│   └── main.css    # Estilos globais do projeto
-├── Readme          # Registro original do repositório
-└── README.md       # Este guia atualizado
+├── assets/
+│   ├── css/
+│   │   ├── base.css       # Estilos globais compartilhados
+│   │   ├── home.css       # Estilos da landing page
+│   │   ├── pacman.css     # Estilos da página Pac-Man Dimension
+│   │   └── simcity.css    # Estilos da página SimCity Classic
+│   └── js/
+│       ├── home.js        # Interações da landing page
+│       ├── pacman.js      # Lógica do jogo Pac-Man Dimension
+│       └── simcity.js     # Lógica do jogo SimCity Classic
+├── index.html             # Página inicial com apresentação da coleção
+├── pages/
+│   ├── pacman/
+│   │   └── index.html     # Página dedicada ao Pac-Man Dimension
+│   └── simcity/
+│       └── index.html     # Página dedicada ao SimCity Classic
+├── Readme                 # Registro original do repositório
+└── README.md              # Este guia atualizado
 ```
 
 ## Como executar localmente
@@ -67,13 +48,13 @@ Pac-Man Dimension traz uma releitura neon do clássico arcade, combinando labiri
    cd games
    ```
 
-3. Abra o arquivo `index.html` diretamente no navegador ou utilize uma extensão de servidor estático (como Live Server) para visualizar a página.
+3. Abra o arquivo `index.html` diretamente no navegador ou utilize uma extensão de servidor estático (como Live Server) para visualizar a landing page. As páginas dos jogos ficam em `pages/simcity/index.html` e `pages/pacman/index.html`.
 
 ## Personalização
 
-- Atualize as imagens dos cards na seção Biblioteca substituindo as URLs no arquivo `index.html`.
-- Ajuste cores, tipografias e efeitos no arquivo `styles/main.css` para adequar a identidade visual.
-- Inclua novos scripts em `scripts.js` para ampliar interações ou integrar serviços externos.
+- Para adicionar um novo jogo, crie uma pasta em `pages/` com seus arquivos HTML, CSS e JavaScript e importe os ativos necessários a partir de `assets/`.
+- Ajuste cores, tipografias e efeitos globais no arquivo `assets/css/base.css`.
+- Atualize os conteúdos da página inicial em `index.html` para destacar novos títulos ou eventos.
 
 ## Licença
 
