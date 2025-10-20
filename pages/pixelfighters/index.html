@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Fighters - Arcadia Retro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/pixelfighters.css" />
+</head>
+<body>
+  <header class="hero hero--pixelfighters">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Pixel Fighters</h1>
+      <p>Domine combos lendários, carregue o medidor especial e libere golpes cinematográficos.</p>
+      <a class="hero__cta" href="#dojo">Entrar no dojo</a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../../index.html">Início</a></li>
+      <li><a href="#dojo">Dojo</a></li>
+      <li><a href="#personagens">Personagens</a></li>
+      <li><a href="#treino">Treino</a></li>
+      <li><a href="../mysticquest/index.html">Mystic Quest</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="dojo" class="section section--accent">
+      <div class="section__header">
+        <h2>Quadro de combos</h2>
+        <p>Monte sequências rápidas para acumular energia e liberar ataques especiais.</p>
+      </div>
+
+      <div class="pixelfighters-combos">
+        <button type="button" class="pixelfighters-move" data-move="socop">Soco pesado</button>
+        <button type="button" class="pixelfighters-move" data-move="chutep">Chute primário</button>
+        <button type="button" class="pixelfighters-move" data-move="upper">Uppercut fóton</button>
+        <button type="button" class="pixelfighters-move" data-move="dash">Dash espectral</button>
+        <button type="button" class="pixelfighters-move" data-move="ulti">Golpe supremo</button>
+      </div>
+      <p class="pixelfighters-combos__status" data-combo-status>Selecione até quatro golpes para criar um combo exclusivo.</p>
+    </section>
+
+    <section id="personagens" class="section">
+      <div class="section__header">
+        <h2>Hall dos campeões</h2>
+        <p>Conheça lutadores lendários e descubra suas afinidades elementais.</p>
+      </div>
+
+      <div class="pixelfighters-roster">
+        <article>
+          <h3>Aiko Prisma</h3>
+          <p>Especialista em ataques de luz contínua, domina o controle de distância.</p>
+        </article>
+        <article>
+          <h3>Ragnar Flux</h3>
+          <p>Golpes elétricos devastadores que ampliam dano a cada acerto consecutivo.</p>
+        </article>
+        <article>
+          <h3>Selene Nova</h3>
+          <p>Teletransportes curtos e contragolpes lunares que desestabilizam adversários.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="treino" class="section section--dark">
+      <div class="section__header">
+        <h2>Simulador de treino</h2>
+        <p>Ajuste intensidade e acompanhe a evolução do medidor especial.</p>
+      </div>
+
+      <div class="pixelfighters-training">
+        <label>
+          Intensidade
+          <input type="range" min="0" max="100" value="40" data-training="intensidade" />
+        </label>
+        <label>
+          Ritmo
+          <input type="range" min="0" max="100" value="40" data-training="ritmo" />
+        </label>
+        <div class="pixelfighters-training__status" data-training-status>Intensidade equilibrada. Continue treinando para evoluir.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Arcadia Retro. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="../../index.html#contato">Cadastre-se</a></li>
+      <li><a href="../../index.html#biblioteca">Voltar à biblioteca</a></li>
+      <li><a href="../pacman/index.html">Pac-Man Dimension</a></li>
+    </ul>
+  </footer>
+
+  <script src="../../assets/js/pixelfighters.js"></script>
+</body>
+</html>

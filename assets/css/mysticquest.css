@@ -1,0 +1,130 @@
+.hero--mysticquest {
+  background: linear-gradient(135deg, #12081f 0%, #2d1245 50%, #4a1b63 100%), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1350&q=80') center/cover;
+}
+
+.mysticquest-relics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.mysticquest-relic {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(242, 227, 146, 0.6);
+  border-radius: 14px;
+  color: #f2e392;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 1.25rem 0.5rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mysticquest-relic:hover,
+.mysticquest-relic:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(242, 227, 146, 0.5);
+}
+
+.mysticquest-relic.is-active {
+  background: rgba(242, 227, 146, 0.15);
+  box-shadow: 0 0 24px rgba(242, 227, 146, 0.4);
+}
+
+.mysticquest-relic__result {
+  margin-top: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #f7f1d0;
+  text-align: center;
+}
+
+.mysticquest-crystals {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background: rgba(16, 10, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.mysticquest-crystals label {
+  display: grid;
+  gap: 0.75rem;
+  color: #f7f1d0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+}
+
+.mysticquest-crystals input[type="range"] {
+  -webkit-appearance: none;
+  background: linear-gradient(90deg, #f86d70, #f2e392);
+  border-radius: 999px;
+  height: 8px;
+  outline: none;
+}
+
+.mysticquest-crystals input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #f2e392;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(242, 227, 146, 0.5);
+}
+
+.mysticquest-crystals input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #f2e392;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(242, 227, 146, 0.5);
+  border: none;
+}
+
+.mysticquest-crystals__status {
+  margin-top: 1.5rem;
+  background: rgba(242, 227, 146, 0.1);
+  border: 1px solid rgba(242, 227, 146, 0.5);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #f2e392;
+}
+
+.mysticquest-chronicle {
+  background: rgba(12, 8, 25, 0.85);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 24px rgba(74, 12, 145, 0.25);
+}
+
+.mysticquest-action {
+  margin-top: 1.25rem;
+  background: linear-gradient(90deg, #7b42f6 0%, #b01eff 100%);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.8rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mysticquest-action:hover,
+.mysticquest-action:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(176, 30, 255, 0.4);
+}

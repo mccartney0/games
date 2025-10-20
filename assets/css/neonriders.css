@@ -1,0 +1,141 @@
+.hero--neonriders {
+  background: linear-gradient(135deg, #010310 0%, #091536 40%, #1c2b6b 100%), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1350&q=80') center/cover;
+}
+
+.neonriders-garage {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  background: rgba(4, 6, 18, 0.85);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+}
+
+.neonriders-garage fieldset {
+  border: 1px solid rgba(116, 205, 255, 0.4);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+  color: #a3d8ff;
+}
+
+.neonriders-garage legend {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+}
+
+.neonriders-garage label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #d4edff;
+}
+
+.neonriders-garage__summary {
+  background: rgba(23, 34, 78, 0.7);
+  border-radius: 16px;
+  border: 1px solid rgba(116, 205, 255, 0.5);
+  color: #8ad4ff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+.neonriders-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.neonriders-track {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(116, 205, 255, 0.5);
+  border-radius: 999px;
+  color: #8ad4ff;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.6rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neonriders-track.is-active {
+  background: rgba(116, 205, 255, 0.2);
+  box-shadow: 0 0 18px rgba(116, 205, 255, 0.5);
+}
+
+.neonriders-track:hover,
+.neonriders-track:focus {
+  transform: translateY(-2px);
+}
+
+.neonriders-track__details {
+  background: rgba(7, 12, 30, 0.85);
+  border: 1px solid rgba(116, 205, 255, 0.4);
+  border-radius: 18px;
+  color: #d4edff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  padding: 1.75rem;
+}
+
+.neonriders-ranking {
+  background: rgba(2, 4, 20, 0.8);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  text-align: center;
+  color: #8ad4ff;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.neonriders-ranking span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #74cdff;
+}
+
+.neonriders-ranking strong {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+}
+
+.neonriders-action {
+  background: linear-gradient(90deg, #00f5a0 0%, #00d9f5 100%);
+  border: none;
+  border-radius: 999px;
+  color: #04123a;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.8rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neonriders-action:hover,
+.neonriders-action:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 245, 160, 0.5);
+}
+
+@media (max-width: 768px) {
+  .neonriders-garage {
+    grid-template-columns: 1fr;
+  }
+
+  .neonriders-tracks {
+    flex-direction: column;
+  }
+}
