@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystic Quest - Arcadia Retro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/mysticquest.css" />
+</head>
+<body>
+  <header class="hero hero--mysticquest">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Mystic Quest</h1>
+      <p>Desvende ruínas ancestrais, alinhe artefatos místicos e desperte guardiões adormecidos.</p>
+      <a class="hero__cta" href="#artefatos">Iniciar expedição</a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../../index.html">Início</a></li>
+      <li><a href="#artefatos">Artefatos</a></li>
+      <li><a href="#cristais">Cristais</a></li>
+      <li><a href="#cronicas">Crônicas</a></li>
+      <li><a href="../pixelfighters/index.html">Pixel Fighters</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="artefatos" class="section section--accent">
+      <div class="section__header">
+        <h2>Sala dos artefatos</h2>
+        <p>Selecione relíquias para formar combinações lendárias e desbloquear novas habilidades.</p>
+      </div>
+
+      <div class="mysticquest-relics" role="list">
+        <button type="button" class="mysticquest-relic" data-relic="sol">Esfera Solar</button>
+        <button type="button" class="mysticquest-relic" data-relic="luna">Coroa Lunar</button>
+        <button type="button" class="mysticquest-relic" data-relic="terra">Totem Telúrico</button>
+        <button type="button" class="mysticquest-relic" data-relic="vento">Arco Zephyr</button>
+      </div>
+      <p class="mysticquest-relic__result" data-relic-result>Toque em duas relíquias para descobrir sua sinergia.</p>
+    </section>
+
+    <section id="cristais" class="section">
+      <div class="section__header">
+        <h2>Santuário elemental</h2>
+        <p>Distribua energia entre cristais para manter o portal ancestral estabilizado.</p>
+      </div>
+
+      <div class="mysticquest-crystals">
+        <label>
+          Fogo
+          <input type="range" min="0" max="100" value="25" data-crystal="fogo" />
+        </label>
+        <label>
+          Água
+          <input type="range" min="0" max="100" value="25" data-crystal="agua" />
+        </label>
+        <label>
+          Terra
+          <input type="range" min="0" max="100" value="25" data-crystal="terra" />
+        </label>
+        <label>
+          Ar
+          <input type="range" min="0" max="100" value="25" data-crystal="ar" />
+        </label>
+      </div>
+      <div class="mysticquest-crystals__status" data-crystal-status>Equilibre os quatro cristais para estabilizar o portal.</div>
+    </section>
+
+    <section id="cronicas" class="section section--dark">
+      <div class="section__header">
+        <h2>Crônicas do oráculo</h2>
+        <p>Desbloqueie visões ancestrais e planeje sua próxima jornada.</p>
+      </div>
+
+      <div class="mysticquest-chronicle">
+        <h3>Registro atual</h3>
+        <p data-chronicle-log>As constelações aguardam a combinação correta de artefatos.</p>
+        <button type="button" class="mysticquest-action" data-chronicle-advance>Interpretar visão</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Arcadia Retro. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="../../index.html#contato">Cadastre-se</a></li>
+      <li><a href="../../index.html#biblioteca">Voltar à biblioteca</a></li>
+      <li><a href="../neonriders/index.html">Neon Riders</a></li>
+    </ul>
+  </footer>
+
+  <script src="../../assets/js/mysticquest.js"></script>
+</body>
+</html>

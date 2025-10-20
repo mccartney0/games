@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Defender - Arcadia Retro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/stardefender.css" />
+</head>
+<body>
+  <header class="hero hero--stardefender">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Star Defender</h1>
+      <p>Proteja a galáxia com esquadrões táticos, armamentos moduláveis e batalhas cheias de efeitos retrô.</p>
+      <a class="hero__cta" href="#briefing">Entrar na cabine</a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../../index.html">Início</a></li>
+      <li><a href="#briefing">Briefing</a></li>
+      <li><a href="#hangar">Hangar</a></li>
+      <li><a href="#simulacao">Simulação</a></li>
+      <li><a href="../neonriders/index.html">Neon Riders</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="briefing" class="section section--neon">
+      <div class="section__header">
+        <h2>Operação Nebulosa Carmesim</h2>
+        <p>Analise ameaças intergalácticas, defina prioridades de defesa e distribua energia entre os módulos da nave.</p>
+      </div>
+
+      <div class="stardefender-briefing">
+        <div class="stardefender-panel">
+          <h3>Status da frota</h3>
+          <ul>
+            <li>Fragatas leves: <strong>12</strong></li>
+            <li>Interceptadores: <strong>08</strong></li>
+            <li>Cruzeiros táticos: <strong>03</strong></li>
+            <li>Porta-naves: <strong>01</strong></li>
+          </ul>
+        </div>
+
+        <div class="stardefender-panel">
+          <h3>Mapa estelar</h3>
+          <p>Setor Alfa-9 apresenta incursões recorrentes de drones autônomos. Distribua esquadrões para interceptação imediata.</p>
+          <button type="button" class="stardefender-action" data-stardefender-scan>Ativar varredura</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="hangar" class="section">
+      <div class="section__header">
+        <h2>Configuração do esquadrão</h2>
+        <p>Selecione a combinação ideal de armamento para equilibrar força ofensiva e blindagem.</p>
+      </div>
+
+      <div class="stardefender-loadout" role="group" aria-labelledby="loadout-title">
+        <div class="stardefender-loadout__option">
+          <h3 id="loadout-title">Armas principais</h3>
+          <ul>
+            <li><label><input type="radio" name="arma" value="canhao" checked> Canhão de partículas</label></li>
+            <li><label><input type="radio" name="arma" value="laser"> Laser prismático</label></li>
+            <li><label><input type="radio" name="arma" value="plasmas"> Torpedos de plasma</label></li>
+          </ul>
+        </div>
+        <div class="stardefender-loadout__option">
+          <h3>Suporte</h3>
+          <ul>
+            <li><label><input type="checkbox" value="drone"> Drones engenheiros</label></li>
+            <li><label><input type="checkbox" value="escudo"> Matriz de escudo espectral</label></li>
+            <li><label><input type="checkbox" value="med"> Nanomédicos de emergência</label></li>
+          </ul>
+        </div>
+        <div class="stardefender-loadout__summary">
+          <h3>Painel tático</h3>
+          <p data-stardefender-summary>Canhão de partículas equipado. Sem suporte adicional selecionado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulacao" class="section section--dark">
+      <div class="section__header">
+        <h2>Simulação de combate</h2>
+        <p>Execute ondas virtuais e acompanhe a barra de ameaça para ajustar a estratégia.</p>
+      </div>
+
+      <div class="stardefender-sim">
+        <div class="stardefender-display" aria-live="polite">
+          <p><span>Onda atual:</span> <strong data-stardefender-wave>0</strong></p>
+          <p><span>Ameaça:</span> <strong data-stardefender-threat>0%</strong></p>
+          <p data-stardefender-log>Inicie a simulação para avaliar o desempenho do esquadrão.</p>
+        </div>
+        <button type="button" class="stardefender-action" data-stardefender-start>Iniciar simulação</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Arcadia Retro. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="../../index.html#contato">Cadastre-se</a></li>
+      <li><a href="../../index.html#biblioteca">Voltar à biblioteca</a></li>
+      <li><a href="../mysticquest/index.html">Mystic Quest</a></li>
+    </ul>
+  </footer>
+
+  <script src="../../assets/js/stardefender.js"></script>
+</body>
+</html>
